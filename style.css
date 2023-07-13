@@ -4,17 +4,39 @@
     box-sizing: border-box;
 }
 
+:root {
+    --white: #ffffff;
+    --dark1: #414a4c;
+    --dark2: #3b444b;
+    --dark3: #353839;
+    --dark4: #232b2b;
+    --dark5: #0e1111;
+    --orange1: #ffa213;
+}
+
+body {
+    background-color: var(--dark4);
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
-    padding: 12.8px;
+    padding: 12px;
+    background-color: var(--dark5);
     min-height: 50PX;
 }
 
 .box-img-header {
+    height: 100%;
+}
+
+.img-logo01 {
+    max-width: 200px;
     height: 100%;
 }
 
@@ -26,9 +48,110 @@ nav {
     flex-wrap: wrap;
 }
 
-.img-logo01 {
-    max-width: 200px;
-    height: 100%;
+.nav-links {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav-links:hover {
+    color: var(--orange1);
+    transition: .4s;
+    text-decoration: underline;
+}
+
+.box-btn-actions {
+    display: flex;
+}
+
+button, .link-action {
+    padding: 9px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn-action {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.btn-action:hover {
+    background-color: var(--orange1);
+    border: 1px solid var(--orange1);
+}
+
+.link-action {
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+section {
+    padding: 64px;
+}
+
+.title-section {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.first-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 650px;
+}
+
+.first-section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 300px;
+}
+
+.video-explicativo {
+    display: flex;
+    justify-content: center;
+}
+
+.second-section {
+    background-color: var(--dark3);
+}
+
+h1 {
+    font-size: 30px;
+    color: var(--white);
+    letter-spacing: 8px;
+}
+
+strong {
+    color: var(--orange1)
+}
+
+.first-section p {
+    color: var(--white);
+}
+
+.box-img-main {
+    max-width: 450px;
+    padding: 16px;
+}
+
+.img-capa-curso {
+   border-radius: 5%;
+   width: 100%;
 }
 
 #social-links {
